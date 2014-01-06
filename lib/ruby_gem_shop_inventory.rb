@@ -7,7 +7,7 @@ require_relative 'support_files/customer.rb'
 
 class Inventory
 
-	def self.choicemenu
+	def self.choice_menu
 
 
 		customer_instance = CustomerDetails.new

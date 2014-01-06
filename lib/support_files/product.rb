@@ -21,14 +21,15 @@ class Product
 					print "    Enter the product COMPANY :"
 					@product_company= gets.strip 
 					#print product_quantity	
-				end
+	end
 
 
 
 
 	#This method writes  new items to the stock.
 	def self.write_product(product_name,product_id,product_price,product_quantity,product_company)
-		File.open("inventory.txt", "a") do |inventory_file|
+		
+		File.open("#{File.expand_path('inventory.txt', File.dirname(__FILE__))}", "a") do |inventory_file|
 
 			inventory_file.puts("#{@product_id}^#{@product_name}^#{@product_price}" +
 				"^#{@product_quantity}^#{@product_company}")
@@ -40,7 +41,7 @@ class Product
 
 	#This method removes items in the stock
 	def self.remove_product(product_id)
-		array = IO.readlines("inventory.txt")
+		array = IO.readlines("#{File.expand_path('inventory.txt', File.dirname(__FILE__))}")
 		len=0,i=0;
 		len=array.length
 
@@ -57,12 +58,16 @@ class Product
 			i=i+1;
 		end
 
-		FileUtils.mv("tempfile.txt","inventory.txt")
+		FileUtils.mv("tempfile.txt","#{File.expand_path('inventory.txt', File.dirname(__FILE__))}")
 		puts "\nItem removed."
 	end
 
 
 end
+
+
+
+
 
 # Shows the details of the product to the shopkeeper
 =begin

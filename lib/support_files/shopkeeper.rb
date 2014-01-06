@@ -29,8 +29,7 @@ class ShopkeeperDetails
 
       when 1
         puts "\nDisplaying current stock : " 
-          read_products_stock  ####################
-
+          read_products_stock  
         when 2 
           puts " Add New Items to stock : \n"
           Product.get_product_details
