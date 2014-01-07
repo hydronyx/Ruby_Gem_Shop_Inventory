@@ -1,0 +1,4 @@
+#!/usr/bin/env ruby
+
+require 'ruby_gem_shop_inventory'
+Inventory.choice_menu

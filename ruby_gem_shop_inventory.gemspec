@@ -2,6 +2,7 @@
 Gem::Specification.new do |s|
   s.name        = 'ruby_gem_shop_inventory'
   s.version     = '0.0.1'
+  s.executables << 'ruby_gem_shop_inventory'
   s.date        = '2014-01-05'
   s.summary     = "Simple Console Based Shop Inventory Management in Ruby."
   s.description = "A Inventory Management System for a small shop with features like add,search,remove,etc."
